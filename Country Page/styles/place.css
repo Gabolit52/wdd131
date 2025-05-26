@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #006a4e;
+  --secondary-color: #ffffff;
+  --accent-color: #ffcc00;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+.weather .icon::after {
+  content: "⛅"; /* Wide view only */
+}
+
+@media (max-width: 768px) {
+  .weather .icon::after {
+    content: "";
+    background: url('../images/weather.svg') no-repeat center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+}
