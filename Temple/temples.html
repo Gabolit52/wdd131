@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu">&#9776;</button> <!-- Hamburger button -->
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Temples</h2>
+    <div class="grid">
+      <!-- Replace all src with your own images -->
+      <figure>
+        <img src="images/temple1.jpg" alt="Temple 1" />
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <!-- Repeat this 9 times total -->
+      <figure>
+        <img src="images/temple2.jpg" alt="Temple 2" />
+        <figcaption>Temple 2</figcaption>
+      </figure>
+      <!-- Add 7 more -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Gabriel Zevallos | Last updated: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

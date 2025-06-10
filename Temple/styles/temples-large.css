@@ -1,0 +1,50 @@
+/* Large screen styles for temples page */
+
+/* Example: Increase font size and max width */
+body {
+  font-size: 1.25rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header, .footer {
+  padding: 2rem 4rem;
+}
+
+.main-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.temple-card {
+  width: 30%;
+  min-width: 350px;
+  margin-bottom: 2rem;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex !important;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  button#menu {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .temple-card {
+    width: 25%;
+  }
+}
