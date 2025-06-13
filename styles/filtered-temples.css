@@ -1,73 +1,60 @@
-/* Color Schema */
-:root {
-  --primary-color: #2c3e50; /* dark blue-gray */
-  --accent-color: #18bc9c;  /* teal */
-  --background-color: #f4f6f8; /* light gray */
-  --text-color: #333333;
-  --heading-color: var(--primary-color);
-}
-
-/* Typography */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+/* Reset & basics */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: var(--primary-color);
-  color: white;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f9f9f9;
+  color: #222;
   padding: 1rem;
-  text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 1.8rem;
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 nav {
-  margin: 1rem auto;
-  max-width: 960px;
-  text-align: center;
+  margin-top: 0.5rem;
 }
 
 nav button {
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
   margin: 0 0.25rem;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  background-color: #005a9c;
+  color: white;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 nav button:hover,
-nav button.active {
-  background-color: #148f77; /* darker teal */
+nav button:focus {
+  background-color: #003d66;
+  outline: none;
 }
 
-main {
-  max-width: 960px;
-  margin: 1rem auto;
-  padding: 0 1rem;
+/* Main temple container */
+#temples-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
 
+/* Temple cards */
 .temple-card {
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+  padding: 1rem;
+  text-align: center;
   transition: transform 0.2s ease;
 }
 
@@ -75,38 +62,27 @@ main {
   transform: translateY(-5px);
 }
 
-.temple-image {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-bottom: 1px solid #ddd;
+.temple-card h3 {
+  margin-bottom: 0.5rem;
+  color: #005a9c;
 }
 
-.temple-info {
-  padding: 1rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.temple-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.2);
 }
 
-.temple-info h2 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-  color: var(--heading-color);
+.temple-card p {
+  margin: 0.25rem 0;
 }
 
-.temple-info p {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
-}
-
+/* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: var(--primary-color);
-  border-top: 1px solid #ccc;
   margin-top: 2rem;
-  background: #e9f5f2;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
 }

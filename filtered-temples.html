@@ -7,27 +7,25 @@
   <link rel="stylesheet" href="filtered-temples.css" />
 </head>
 <body>
-
   <header>
     <h1>Enhanced Temple Picture Album</h1>
+    <nav>
+      <button id="btn-home">Home</button>
+      <button id="btn-old">Old</button>
+      <button id="btn-new">New</button>
+      <button id="btn-large">Large</button>
+      <button id="btn-small">Small</button>
+    </nav>
   </header>
 
-  <nav>
-    <button id="filter-home" class="active">Home</button>
-    <button id="filter-old">Old (before 1900)</button>
-    <button id="filter-new">New (after 2000)</button>
-    <button id="filter-large">Large (&gt; 90,000 sq ft)</button>
-    <button id="filter-small">Small (&lt; 10,000 sq ft)</button>
-  </nav>
-
   <main id="temples-container">
-    <!-- Temple cards will be injected here -->
+    <!-- Temple cards will be dynamically injected here -->
   </main>
 
   <footer>
-    &copy; <span id="year"></span> Gabriel Zevallos | Last Modified: <span id="last-modified"></span>
+    <p>&copy; <span id="current-year"></span> - Last Modified: <span id="last-modified"></span> - Student: <span id="student-name"></span></p>
   </footer>
 
-  <script src="filtered-temples.js"></script>
+  <script src="filtered-temples.js" defer></script>
 </body>
 </html>

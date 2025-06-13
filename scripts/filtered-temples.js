@@ -1,3 +1,4 @@
+// Array of temple objects (10 total)
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -5,7 +6,7 @@ const temples = [
     dedicated: "2005, August, 7",
     area: 11500,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg",
   },
   {
     templeName: "Manti Utah",
@@ -13,7 +14,7 @@ const temples = [
     dedicated: "1888, May, 21",
     area: 74792,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg",
   },
   {
     templeName: "Payson Utah",
@@ -21,7 +22,7 @@ const temples = [
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg",
   },
   {
     templeName: "Yigo Guam",
@@ -29,7 +30,7 @@ const temples = [
     dedicated: "2020, May, 2",
     area: 6861,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg",
   },
   {
     templeName: "Washington D.C.",
@@ -37,7 +38,7 @@ const temples = [
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
   },
   {
     templeName: "Lima Perú",
@@ -45,7 +46,7 @@ const temples = [
     dedicated: "1986, January, 10",
     area: 9600,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg",
   },
   {
     templeName: "Mexico City Mexico",
@@ -53,88 +54,105 @@ const temples = [
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
   // Added 3 more temples:
   {
-    templeName: "Quito Ecuador",
-    location: "Quito, Ecuador",
-    dedicated: "1999, July, 9",
-    area: 8500,
+    templeName: "Tokyo Japan",
+    location: "Tokyo, Japan",
+    dedicated: "1980, October, 27",
+    area: 48433,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/quito-ecuador/400x250/quito-ecuador-temple-exterior-1234567-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo_japan_temple_exterior.jpg",
   },
   {
-    templeName: "Okinawa Japan",
-    location: "Okinawa, Japan",
-    dedicated: "2000, May, 21",
-    area: 11100,
+    templeName: "Salt Lake Temple",
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1893, April, 6",
+    area: 253015,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/okinawa-japan/400x250/okinawa-japan-temple-exterior-1234568-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-utah/400x250/salt-lake-temple-exterior.jpg",
   },
   {
-    templeName: "Stockholm Sweden",
-    location: "Stockholm, Sweden",
-    dedicated: "1985, August, 25",
-    area: 9800,
+    templeName: "Rome Italy",
+    location: "Rome, Italy",
+    dedicated: "2019, March, 10",
+    area: 25843,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/stockholm-sweden/400x250/stockholm-sweden-temple-exterior-1234569-wallpaper.jpg"
-  }
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior.jpg",
+  },
 ];
 
-const container = document.getElementById('temples-container');
-const buttons = {
-  home: document.getElementById('filter-home'),
-  old: document.getElementById('filter-old'),
-  new: document.getElementById('filter-new'),
-  large: document.getElementById('filter-large'),
-  small: document.getElementById('filter-small')
-};
-
-// Helper: parse dedication year from string "YYYY, Month, Day"
-function getDedicationYear(dedicated) {
-  return new Date(dedicated).getFullYear();
+// Function to parse dedication year from string like "2005, August, 7"
+function getDedicationYear(dedicatedStr) {
+  return parseInt(dedicatedStr.split(",")[0]);
 }
 
-// Create temple card HTML element
-function createTempleCard(temple) {
-  const card = document.createElement('article');
-  card.className = 'temple-card';
+// Create and display temple cards inside the container
+function displayTemples(filteredTemples) {
+  const container = document.getElementById("temples-container");
+  container.innerHTML = ""; // Clear existing
 
-  card.innerHTML = `
-    <img class="temple-image" src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" />
-    <div class="temple-info">
-      <h2>${temple.templeName}</h2>
+  filteredTemples.forEach((temple) => {
+    const card = document.createElement("section");
+    card.className = "temple-card";
+
+    card.innerHTML = `
+      <h3>${temple.templeName}</h3>
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" />
       <p><strong>Location:</strong> ${temple.location}</p>
       <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
       <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-    </div>
-  `;
+    `;
 
-  return card;
-}
-
-// Render temples in container
-function renderTemples(templesToRender) {
-  container.innerHTML = '';
-  templesToRender.forEach(temple => {
-    container.appendChild(createTempleCard(temple));
+    container.appendChild(card);
   });
 }
 
-// Filter handlers
+// Filtering functions
 function filterOld() {
-  return temples.filter(t => getDedicationYear(t.dedicated) < 1900);
+  const oldTemples = temples.filter(t => getDedicationYear(t.dedicated) < 1900);
+  displayTemples(oldTemples);
 }
 
 function filterNew() {
-  return temples.filter(t => getDedicationYear(t.dedicated) > 2000);
+  const newTemples = temples.filter(t => getDedicationYear(t.dedicated) > 2000);
+  displayTemples(newTemples);
 }
 
 function filterLarge() {
-  return temples.filter(t => t.area > 90000);
+  const largeTemples = temples.filter(t => t.area > 90000);
+  displayTemples(largeTemples);
 }
 
 function filterSmall() {
-  return temples.filter(t => t.area < 10000);
+  const smallTemples = temples.filter(t => t.area < 10000);
+  displayTemples(smallTemples);
 }
+
+function filterHome() {
+  displayTemples(temples);
+}
+
+// Setup event listeners for buttons after DOM loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Initial display of all temples
+  displayTemples(temples);
+
+  // Buttons
+  document.getElementById("btn-old").addEventListener("click", filterOld);
+  document.getElementById("btn-new").addEventListener("click", filterNew);
+  document.getElementById("btn-large").addEventListener("click", filterLarge);
+  document.getElementById("btn-small").addEventListener("click", filterSmall);
+  document.getElementById("btn-home").addEventListener("click", filterHome);
+
+  // Footer date and copyright
+  const yearSpan = document.getElementById("current-year");
+  if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+  const lastModSpan = document.getElementById("last-modified");
+  if(lastModSpan) lastModSpan.textContent = document.lastModified;
+
+  const studentNameSpan = document.getElementById("student-name");
+  if(studentNameSpan) studentNameSpan.textContent = "Your Name Here"; // Replace with your name
+});
