@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced Temple Picture Album</title>
+  <link rel="stylesheet" href="filtered-temples.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced Temple Picture Album</h1>
+  </header>
+
+  <nav>
+    <button id="filter-home" class="active">Home</button>
+    <button id="filter-old">Old (before 1900)</button>
+    <button id="filter-new">New (after 2000)</button>
+    <button id="filter-large">Large (&gt; 90,000 sq ft)</button>
+    <button id="filter-small">Small (&lt; 10,000 sq ft)</button>
+  </nav>
+
+  <main id="temples-container">
+    <!-- Temple cards will be injected here -->
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Gabriel Zevallos | Last Modified: <span id="last-modified"></span>
+  </footer>
+
+  <script src="filtered-temples.js"></script>
+</body>
+</html>
