@@ -26,6 +26,12 @@
     <p>&copy; <span id="current-year"></span> - Last Modified: <span id="last-modified"></span> - Student: <span id="student-name"></span></p>
   </footer>
 
-  <script src="filtered-temples.js" defer></script>
+ <script src="filtered-temples.js" defer></script>
+    <script>
+        // Set the current year and last modified date
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+        document.getElementById('student-name').textContent = 'Your Name'; // Replace with your name
+    </script>
 </body>
 </html>
