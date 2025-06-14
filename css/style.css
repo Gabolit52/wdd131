@@ -1,0 +1,53 @@
+/* Color Schema Variables */
+:root {
+  --color-heading: #5a4d41; /* Dark Brown */
+  --color-background: #d9cbb6; /* Light Beige */
+  --color-accent: #a67c52; /* Medium Brown */
+  --color-text: #333333; /* Dark Gray */
+}
+
+/* Base Styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 1rem 2rem;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  color: var(--color-heading);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+a, button {
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+/* Wireframe styling */
+.wireframe {
+  font-family: monospace;
+  background-color: #f9f6f1;
+  border: 2px dashed var(--color-accent);
+  padding: 1rem;
+  white-space: pre-wrap;
+}
