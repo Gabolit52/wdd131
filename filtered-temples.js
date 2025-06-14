@@ -63,7 +63,7 @@ const temples = [
     dedicated: "1980, October, 27",
     area: 48433,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo_japan_temple_exterior.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/52/Tokyo_Japan_Temple.jpg",
   },
   {
     templeName: "Salt Lake Temple",
@@ -71,7 +71,7 @@ const temples = [
     dedicated: "1893, April, 6",
     area: 253015,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-utah/400x250/salt-lake-temple-exterior.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/03/Salt_Lake_Temple_-_SLC_2008.JPG",
   },
   {
     templeName: "Rome Italy",
@@ -79,7 +79,7 @@ const temples = [
     dedicated: "2019, March, 10",
     area: 25843,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior.jpg",
+      "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg",
   },
 ];
 
