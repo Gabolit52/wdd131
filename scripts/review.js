@@ -39,3 +39,20 @@ function displayData(data) {
       }
     });
   }
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the current count from localStorage or start at 0
+  let reviewCount = Number(localStorage.getItem('reviewCount')) || 0;
+
+  // Increment the count for each page load (i.e., each review submission)
+  reviewCount++;
+
+  // Save the updated count back to localStorage
+  localStorage.setItem('reviewCount', reviewCount);
+
+  // Display the count somewhere on the page, e.g., an element with id="reviewCounter"
+  const counterEl = document.getElementById('reviewCounter');
+  if (counterEl) {
+    counterEl.textContent = `Number of reviews submitted: ${reviewCount}`;
+  }
+});
+  

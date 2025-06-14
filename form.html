@@ -17,11 +17,10 @@
     <form method="get" action="review.html">
 
       <label for="product">Product Name<span>*</span></label>
-      <select id="product" name="product" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <!-- Dynamically added options -->
-      </select>
-
+      <select id="productName" name="productName" required>
+  <option value="" disabled selected>Select a Product ...</option>
+  <!-- JavaScript will add options here -->
+</select>
       <fieldset>
         <legend>Overall Rating<span>*</span></legend>
         <label><input type="radio" name="rating" id="rating1" value="1" required> 1 &#9733;</label>
