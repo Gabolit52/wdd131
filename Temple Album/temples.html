@@ -4,17 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temple Album</title>
+  <meta name="description" content="A responsive album showcasing temple images as part of a WDD 131 web development project." />
+  <meta name="author" content="Gabriel Zevallos" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/temples.css" />
-  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/temples-large.css" />
   <script src="scripts/temples.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>Temple Album</h1>
-    <button id="menu">&#9776;</button>
+    <button id="menu">&#9776;</button> <!-- Hamburger button -->
     <nav class="navigation">
-      <a href="index.html">Home</a>
+      <a href="#">Home</a>
       <a href="#">Old</a>
       <a href="#">New</a>
       <a href="#">Large</a>
@@ -23,54 +26,49 @@
   </header>
 
   <main>
-    <h2>Temples Around the World</h2>
-    <section class="gallery">
-      
+    <h2>Our Temples</h2>
+    <div class="grid">
       <figure>
-        <img src="images/temple1.jpg" alt="Temple 1">
-        <figcaption>Temple 1</figcaption>
-      </figure> 
-      <figure>
-        <img src="images/temple2.jpg" alt="Fukuoka Japan Temple">
+        <img src="images/temple1.jpg" alt="Temple 1" />
         <figcaption>Fukuoka Japan Temple</figcaption>
-      </figure> 
+      </figure>
       <figure>
-        <img src="images/temple3.jpg" alt="Las Vegas Nevada Temple">
+        <img src="images/temple2.jpg" alt="Temple 2" />
         <figcaption>Las Vegas Nevada Temple</figcaption>
-      </figure> 
+      </figure>
       <figure>
-        <img src="images/temple4.jpg" alt="Madrid Spain Temple">
+        <img src="images/temple3.jpg" alt="Temple 3" />
         <figcaption>Madrid Spain Temple</figcaption>
-      </figure> 
+      </figure>
       <figure>
-        <img src="images/temple5.jpg" alt="Ogden Utah Temple">
+        <img src="images/temple4.jpg" alt="Temple 4" />
         <figcaption>Ogden Utah Temple</figcaption>
-      </figure> 
+      </figure>
       <figure>
-        <img src="images/temple6.jpg" alt="Rio de Janeiro Brazil Temple">
-        <figcaption>Rio de Janeiro Brazil Temple</figcaption>
-      </figure> 
+        <img src="images/temple5.jpg" alt="Temple 5" />
+        <figcaption>Rio de Janeiro Brazil</figcaption>
+      </figure>
       <figure>
-        <img src="images/temple7.jpg" alt="Washington DC Temple">
+        <img src="images/temple6.jpg" alt="Temple 6" />
         <figcaption>Washington DC Temple</figcaption>
-      </figure> 
+      </figure>
       <figure>
-        <img src="images/temple8.jpg" alt="Arequipa Peru Temple">
+        <img src="images/temple7.jpg" alt="Temple 7" />
         <figcaption>Arequipa Peru Temple</figcaption>
       </figure>
-       <figure>
-        <img src="images/temple9.jpg" alt="Lima peru los olivos Temple">
+      <figure>
+        <img src="images/temple8.jpg" alt="Temple 8" />
         <figcaption>Lima peru los olivos Temple</figcaption>
       </figure>
-    </section>
-  </main><figure>
-        <img src="images/temple10.jpg" alt="Lisbon Portugal Temple">
+      <figure>
+        <img src="images/temple9.jpg" alt="Temple 9" />
         <figcaption>Lisbon Portugal Temple</figcaption>
-      </figure> 
+      </figure>
+    </div>
+  </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Gabriel Zevallos | WDD 131</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> | Gabriel Zevallos | Last updated: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>
