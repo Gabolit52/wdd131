@@ -1,35 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Review Submitted</title>
-  <link rel="stylesheet" href="styles/form.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="Product Review Submission Confirmation Page" />
+  <meta name="author" content="Gabriel Zevallos" />
+  <title>Product Review Confirmation</title>
+  <link rel="stylesheet" href="styles/review.css" />
 </head>
 <body>
   <header>
     <h1>Thank You for Your Review!</h1>
   </header>
+  <main>
+    <section>
+      <h2>Review Summary</h2>
+      <dl>
+        <dt>Product Name:</dt>
+        <dd id="productName-value"></dd>
 
-  <main class="confirmation-container">
-    <p class="success-message">🎉 Your product review has been successfully submitted.</p>
-    <p class="counter-display">You have submitted <span id="review-count">0</span> review(s).</p>
-    <a href="form.html" class="button-link">Submit Another Review</a>
+        <dt>Overall Rating:</dt>
+        <dd id="overallRating-value"></dd>
+
+        <dt>Date of Installation:</dt>
+        <dd id="dateInstalled-value"></dd>
+
+        <dt>Useful Features:</dt>
+        <dd id="usefulFeatures-value"></dd>
+
+        <dt>Written Review:</dt>
+        <dd id="writtenReview-value"></dd>
+
+        <dt>User Name:</dt>
+        <dd id="userName-value"></dd>
+      </dl>
+    </section>
+
+    <section>
+      <p>You have submitted <span id="review-count">0</span> reviews.</p>
+      <a href="form.html" class="button">Submit Another Review</a>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Gabriel Zevallos | WDD 131</p>
+    <p>&copy; 2025 Gabriel Zevallos</p>
   </footer>
 
-  <script>
-    // Increase review count in localStorage
-    const key = "reviewCount";
-    let count = Number(localStorage.getItem(key)) || 0;
-    count++;
-    localStorage.setItem(key, count);
-
-    // Display the count
-    document.getElementById("review-count").textContent = count;
-  </script>
+  <script src="scripts/review.js" defer></script>
 </body>
 </html>

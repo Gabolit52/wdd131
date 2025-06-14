@@ -1,28 +1,31 @@
-// Product Array
+// Product array - id used for value, name used for option display
 const products = [
-  { id: 'fc-1888', name: 'Flux Capacitor' },
-  { id: 'fc-2050', name: 'Power Laces' },
-  { id: 'fs-1987', name: 'Hoverboard' },
-  { id: 'fs-2030', name: 'Hydration Pizza' },
-  { id: 'ac-1993', name: 'Smart Jacket' }
+  { id: "p1", name: "SuperWidget 3000" },
+  { id: "p2", name: "Gadget Pro X" },
+  { id: "p3", name: "UltraTool Deluxe" },
+  { id: "p4", name: "MegaDevice Plus" }
 ];
 
-// Populate select dropdown
-const select = document.querySelector('#productName');
-products.forEach(product => {
-  const option = document.createElement('option');
-  option.value = product.id;
-  option.textContent = product.name;
-  select.appendChild(option);
+// Populate the product select element dynamically
+document.addEventListener("DOMContentLoaded", () => {
+  const productSelect = document.getElementById("product-name");
+
+  // Clear any existing options except placeholder
+  productSelect.innerHTML = '';
+
+  // Add placeholder option
+  const placeholderOption = document.createElement("option");
+  placeholderOption.textContent = "Select a Product ...";
+  placeholderOption.disabled = true;
+  placeholderOption.selected = true;
+  placeholderOption.value = "";
+  productSelect.appendChild(placeholderOption);
+
+  // Add product options dynamically
+  products.forEach(product => {
+    const option = document.createElement("option");
+    option.value = product.id;
+    option.textContent = product.name;
+    productSelect.appendChild(option);
+  });
 });
-
-// localStorage counter
-if (window.location.href.includes('review.html')) {
-  let count = localStorage.getItem('reviewCount');
-  count = count ? parseInt(count) + 1 : 1;
-  localStorage.setItem('reviewCount', count);
-
-  const counter = document.createElement('p');
-  counter.textContent = `You have submitted ${count} review(s).`;
-  document.body.appendChild(counter);
-} 
