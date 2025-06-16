@@ -1,0 +1,184 @@
+/* Base styles */
+:root {
+  --primary-color: #2f4858;
+  --accent-color: #f4a261;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Layout */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  margin-top: 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Services Section */
+.services {
+  padding: 1rem;
+  background-color: #fff;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.services h2 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.services ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 1rem;
+  background-color: #e0f0f9;
+  border-radius: 8px;
+}
+
+#testimonial-container {
+  margin-top: 1rem;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+input, textarea, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e76f51;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .services,
+  .testimonials {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+
+  form {
+    margin-top: 2rem;
+  }
+}

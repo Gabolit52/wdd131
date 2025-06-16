@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit your product review including ratings and feedback.">
+  <meta name="author" content="Gabriel Zevallos">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+  <main>
+    <form method="get" action="review.html">
+
+      <label for="product">Product Name<span>*</span></label>
+      <select id="productName" name="productName" required>
+  <option value="" disabled selected>Select a Product ...</option>
+  <!-- JavaScript will add options here -->
+</select>
+      <fieldset>
+        <legend>Overall Rating<span>*</span></legend>
+        <label><input type="radio" name="rating" id="rating1" value="1" required> 1 &#9733;</label>
+        <label><input type="radio" name="rating" id="rating2" value="2"> 2 &#9733;</label>
+        <label><input type="radio" name="rating" id="rating3" value="3"> 3 &#9733;</label>
+        <label><input type="radio" name="rating" id="rating4" value="4"> 4 &#9733;</label>
+        <label><input type="radio" name="rating" id="rating5" value="5"> 5 &#9733;</label>
+      </fieldset>
+
+      <label for="install-date">Date of Installation<span>*</span></label>
+      <input type="date" id="install-date" name="installDate" required>
+
+      <fieldset>
+        <legend>Useful Features</legend>
+        <label><input type="checkbox" id="feature1" name="features" value="durability"> Durability</label>
+        <label><input type="checkbox" id="feature2" name="features" value="design"> Design</label>
+        <label><input type="checkbox" id="feature3" name="features" value="performance"> Performance</label>
+        <label><input type="checkbox" id="feature4" name="features" value="price"> Price</label>
+      </fieldset>
+
+      <label for="review">Written Review</label>
+      <textarea id="review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+
+      <label for="username">Your Name</label>
+      <input type="text" id="username" name="username" placeholder="Optional">
+
+      <input type="submit" value="Submit Review">
+
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 Gabriel Zevallos | WDD 131</p>
+  </footer>
+</body>
+</html>
